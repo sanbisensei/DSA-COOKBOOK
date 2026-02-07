@@ -43,13 +43,3 @@ str2vec = ['b', 'a', 'a']
 ## Conclusion
 
 ✅ The program correctly identifies that "aba" and "baa" are anagrams.
-
-## Algorithm Logic
-
-The program uses a character matching approach:
-
-1. Convert both strings to character vectors
-2. For each character in str1, search for it in str2
-3. Mark matched characters in str2 as '#' to avoid reusing them
-4. If any character from str1 is not found, they're not anagrams
-5. If all characters match, they're anagrams
