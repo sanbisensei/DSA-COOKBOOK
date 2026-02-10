@@ -39,7 +39,3 @@ int main(){
     
     return 0;
 }
-
-
-// naked eye = O(n^2)
-// actual = O(1)
