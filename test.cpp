@@ -2,13 +2,17 @@
 using namespace std;
 
 int main() {
-    string s = "zaz";
-    
-    int sum = 0;
-    for (int i = 0; i < s.size()-1; i++) {
-        sum = sum + abs(((int)s[i]-(int)s[i+1]));
+    int arr[5] = {1,2,3,4,5};
+    vector<int> newarr;
+    for(int i=0; i<10;i++){
+        
+            newarr.push_back(arr[i]);
+      
+            
     }
-    cout <<sum <<endl;
+    for(int i: newarr){
+        cout<< i<<" ";
+    }
     
 
     return 0;
