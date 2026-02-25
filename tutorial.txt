@@ -1,1 +1,2 @@
-this is my dsa cookbook.
+this is my dsa cookbook.and things are getting out of hand
+1. i practiced plsql today
