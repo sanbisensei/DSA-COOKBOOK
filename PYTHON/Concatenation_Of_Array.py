@@ -13,7 +13,6 @@ print(sol.getConcatenation(nums))
 
 
 
-
 # alternate solve:
 # class Solution(object):
 #     def getConcatenation(self, nums):
