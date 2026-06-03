@@ -9,14 +9,6 @@ for i in range(0,len(nums)):
 
 
 
-
-
-
-
-
-
-
-
 # Brute Force -> O(n^2)
 # nums = [3,2,4]
 # target = 6
