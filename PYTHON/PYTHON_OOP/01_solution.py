@@ -12,6 +12,8 @@
 
 # Problem : Add a static method to the Car class that returns a general description of a car.
 
+# Problem : use a property decorator in the Car class to make the model attribute read-only.
+
 
 
 class Car:
@@ -22,7 +24,7 @@ class Car:
 
     def __init__(self,brand,model):
         self.__brand = brand
-        self.model = model
+        self.__model = model
 
         Car.total_car += 1
 
@@ -31,11 +33,15 @@ class Car:
         return self.__brand + "!"
 
     def full_name(self):
-        return f"{self.__brand} {self.model}"
+        return f"{self.__brand} {self.__model}"
     
     def fuel_type(self):
         return "Petrol or Disel"
     
+    @property
+    def model(self):
+        return self.__model
+
     @staticmethod
     def general_description():
         return "Cars are means of transport"
@@ -54,24 +60,26 @@ class ElectricCar(Car):
 
 
 
-# my_car = Car("Toyota","Supra")
+my_car = Car("Toyota","Supra")
+# my_car.model = "Bully"
+print(my_car.model) 
 # print(my_car.brand)
 # print(my_car.full_name())
 # my_new_car = Car("Tata","Safari")
 # print(my_new_car.brand)
 
 
-my_tesla = ElectricCar("Tesla","Model S","85KW")
+# my_tesla = ElectricCar("Tesla","Model S","85KW")
 # print(my_tesla.brand())
 # print(my_tesla.get_brand())
 # print(my_tesla.fuel_type())
 
 
-my_lambo = Car("Lamborgini","Galardo")
-my_Mustange = Car("Mustang","GT")
-my_Ferrari = Car("Ferrari","Lcrc102")
+# my_lambo = Car("Lamborgini","Galardo")
+# my_Mustange = Car("Mustang","GT")
+# my_Ferrari = Car("Ferrari","Lcrc102")
 # print(my_lambo.fuel_type())
 
 # print(Car.total_car)
 
-print(Car.general_description())
+# print(Car.general_description())
