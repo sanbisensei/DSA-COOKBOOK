@@ -1,18 +1,23 @@
-# Problem: Create a Car class with attribute like brand and model. Then create an instance of the class.
+# Problem : Create a Car class with attribute like brand and model. Then create an instance of the class.
 
-# Problem: Add a method to the Car Class that displays the full name of the car(brand and model)
+# Problem : Add a method to the Car Class that displays the full name of the car(brand and model)
 
 # Problem : Create an ElectricCar class that inherits from the Car class and has an additional Attribute battery_size
 
+# Problem : Modify the Car class to encapsulate the brand attribute,making it private and provide a getter method
 
+#
 
 class Car:
     def __init__(self,brand,model):
-        self.brand = brand
+        self.__brand = brand
         self.model = model
 
+    def get_brand(self):
+        return self.__brand + "!"
+
     def full_name(self):
-        return f"{self.brand} {self.model}"
+        return f"{self.__brand} {self.model}"
 
 class ElectricCar(Car):
     def __init__(self,brand,model,battery_size):
@@ -29,4 +34,5 @@ class ElectricCar(Car):
 
 
 my_tesla = ElectricCar("Tesla","Model S","85KW")
-print(my_tesla.full_name())
+print(my_tesla.brand())
+print(my_tesla.get_brand())
