@@ -5,6 +5,7 @@
 # Problem : Create an ElectricCar class that inherits from the Car class and has an additional Attribute battery_size
 
 
+
 class Car:
     def __init__(self,brand,model):
         self.brand = brand
