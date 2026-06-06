@@ -14,7 +14,7 @@
 
 # Problem : use a property decorator in the Car class to make the model attribute read-only.
 
-
+# Problem : Demonstrate the use of isinstance() to check if my_tesla is an instance of Car and ElectricCar
 
 class Car:
 
@@ -62,14 +62,16 @@ class ElectricCar(Car):
 
 my_car = Car("Toyota","Supra")
 # my_car.model = "Bully"
-print(my_car.model) 
+# print(my_car.model) 
 # print(my_car.brand)
 # print(my_car.full_name())
 # my_new_car = Car("Tata","Safari")
 # print(my_new_car.brand)
 
 
-# my_tesla = ElectricCar("Tesla","Model S","85KW")
+my_tesla = ElectricCar("Tesla","Model S","85KW")
+
+print(isinstance(my_tesla,Car))
 # print(my_tesla.brand())
 # print(my_tesla.get_brand())
 # print(my_tesla.fuel_type())
