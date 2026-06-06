@@ -16,6 +16,8 @@
 
 # Problem : Demonstrate the use of isinstance() to check if my_tesla is an instance of Car and ElectricCar
 
+# Problem : Create two classes Battery and Engine, and let the ElectricCar class inherit from both, demonstrating multiple inheritance
+
 class Car:
 
 
@@ -60,7 +62,8 @@ class ElectricCar(Car):
 
 
 
-my_car = Car("Toyota","Supra")
+
+# my_car = Car("Toyota","Supra")
 # my_car.model = "Bully"
 # print(my_car.model) 
 # print(my_car.brand)
@@ -69,9 +72,9 @@ my_car = Car("Toyota","Supra")
 # print(my_new_car.brand)
 
 
-my_tesla = ElectricCar("Tesla","Model S","85KW")
+# my_tesla = ElectricCar("Tesla","Model S","85KW")
 
-print(isinstance(my_tesla,Car))
+# print(isinstance(my_tesla,Car))
 # print(my_tesla.brand())
 # print(my_tesla.get_brand())
 # print(my_tesla.fuel_type())
@@ -85,3 +88,20 @@ print(isinstance(my_tesla,Car))
 # print(Car.total_car)
 
 # print(Car.general_description())
+
+
+class Battery:
+    def battery_info(self):
+        return "This is Battery"
+
+class Engine:
+    def engine_info(self):
+        return "This is Engine"
+
+class ElectricCarTwo(Battery, Engine, Car):
+    pass
+
+my_d = ElectricCarTwo("Dih","Model 24")
+print(my_d.engine_info())
+print(my_d.battery_info())
+print(my_d.full_name())
