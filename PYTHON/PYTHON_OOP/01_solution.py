@@ -6,18 +6,36 @@
 
 # Problem : Modify the Car class to encapsulate the brand attribute,making it private and provide a getter method
 
-#
+# Problem : Demonstrate polymorphism by defining a method fuel_type in both Car and ElectricCar classes, but with different behaviors.
+
+# Problem : Add a class variable to Car that keeps track of number of cars created.
+
 
 class Car:
+
+
+    total_car = 0
+
+
     def __init__(self,brand,model):
         self.__brand = brand
         self.model = model
+
+        Car.total_car += 1
+
 
     def get_brand(self):
         return self.__brand + "!"
 
     def full_name(self):
         return f"{self.__brand} {self.model}"
+    
+    def fuel_type(self):
+        return "Petrol or Disel"
+
+
+
+
 
 class ElectricCar(Car):
     def __init__(self,brand,model,battery_size):
@@ -25,6 +43,11 @@ class ElectricCar(Car):
         # self.model = model
         super().__init__(brand,model)
         self.battery_size = battery_size
+
+    def fuel_type(self):
+        return "Electric charge"
+
+
 
 # my_car = Car("Toyota","Supra")
 # print(my_car.brand)
@@ -34,5 +57,14 @@ class ElectricCar(Car):
 
 
 my_tesla = ElectricCar("Tesla","Model S","85KW")
-print(my_tesla.brand())
-print(my_tesla.get_brand())
+# print(my_tesla.brand())
+# print(my_tesla.get_brand())
+print(my_tesla.fuel_type())
+
+
+my_lambo = Car("Lamborgini","Galardo")
+my_Mustange = Car("Mustang","GT")
+my_Ferrari = Car("Ferrari","Lcrc102")
+# print(my_lambo.fuel_type())
+
+print(Car.total_car)
