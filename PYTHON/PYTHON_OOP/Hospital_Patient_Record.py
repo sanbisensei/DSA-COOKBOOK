@@ -46,3 +46,22 @@ class Patient(Person):
         print("Medical History:")
         for record in self.medical_history:
             print("-", record)
+
+p1 = Patient("Ali", 25)
+p2 = Patient("Sara", 30)
+p3 = Patient("Rahim", 40)
+
+
+p1.add_record("Fever")
+p1.add_record("Cold")
+
+p2.add_record("Diabetes")
+p2.add_record("Blood Pressure")
+
+p3.add_record("Asthma")
+p3.add_record("Allergy")
+
+
+all_patients = [p1, p2, p3]
+for patient in all_patients:
+    patient.show_history()
