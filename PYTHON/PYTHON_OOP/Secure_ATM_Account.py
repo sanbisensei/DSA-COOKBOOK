@@ -1,3 +1,11 @@
+# Build an ATMAccount class with a private attribute __balance and __pin. Write getter and setter methods. The setter for balance should reject negative values. Add a verify_pin(pin) method and a withdraw(amount, pin) method that only works if the pin is correct AND balance is sufficient.
+# Balance and pin stored as private (__balance, __pin)
+# get_balance() and set_balance() methods
+# withdraw() must verify pin first, then check balance
+# Print appropriate error messages for wrong pin or insufficient funds
+
+
+
 class ATMAccount:
     def __init__(self,balance,pin):
         self.__balance = balance
