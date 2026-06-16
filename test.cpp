@@ -15,7 +15,7 @@ int main(){
     while(i<first.size() && i<last.size() && first[i]==last[i]){
         i++;
     }
-
+    
     cout<<first.substr(0,i)<<endl;
     
     return 0;
