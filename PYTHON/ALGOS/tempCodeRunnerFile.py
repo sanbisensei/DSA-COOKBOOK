@@ -1,0 +1,1 @@
+self.visit_count = 0
